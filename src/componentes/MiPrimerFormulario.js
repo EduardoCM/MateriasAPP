@@ -98,6 +98,15 @@ class Formulario extends Component {
 
    return (
      <form onSubmit={this.enviarRegistro}>
+
+     <div>
+       <label> id </label>
+       <input type="text"
+              id="id"
+              value={this.state.id}
+              onChange={ev => this.setState({id: ev.target.value})} />
+      </div>
+
        <div>
          <label> Codigo </label>
          <input type="text"
