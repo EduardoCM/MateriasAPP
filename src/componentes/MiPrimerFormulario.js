@@ -8,7 +8,7 @@ class Registros extends Component {
       materias: []
     }
 
-    fetch('https://control-escolar-digital.herokuapp.com/api/materia')
+    fetch('http://071f78d94e90.ngrok.io/api/materia')
         .then(res => res.json())
         .then(data => {
           this.setState({materias: data })
@@ -62,7 +62,7 @@ class Formulario extends Component {
    console.log("Se enviar valores");
    console.log(this.state);
 
-   fetch('https://control-escolar-digital.herokuapp.com/api/materia', {
+   fetch('http://071f78d94e90.ngrok.io/api/materia', {
      method: 'POST',
      body: JSON.stringify({
        id: this.state.id,
